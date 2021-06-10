@@ -384,10 +384,10 @@ PYBIND11_MODULE(pydirectml, module)
     module.def("activation_identity", &dml::ActivationIdentity, "Takes an input tensor and return the tensor as an output.",
         py::arg("input"));
 
-    module.def("add", &dml::Add, "Takes 2 input tensors and performs addition then returns the resulting tensor.",
-        py::arg("a"),
-        py::arg("b"),
-        py::arg("fused_activation") = dml::FusedActivation::None());
+    // module.def("add", &dml::Add, "Takes 2 input tensors and performs addition then returns the resulting tensor.",
+    //     py::arg("a"),
+    //     py::arg("b"),
+    //     py::arg("fused_activation") = dml::FusedActivation::None());
 
     module.def("subtract", &dml::Subtract, "Takes 2 input tensors and performs subtraction then returns the resulting tensor.",
         py::arg("a"),
